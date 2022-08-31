@@ -47,7 +47,7 @@ jobs:
         uses: docker/build-push-action@v3.1.1
         with:
           context: ./java/
-          file: ./17/Dockerfile
+          file: ./java/17/Dockerfile
           tags: ${{ steps.img_meta.outputs.tags }}
           labels: ${{ steps.img_meta.outputs.labels }}
           push: ${{ github.event_name != 'pull_request' }}
